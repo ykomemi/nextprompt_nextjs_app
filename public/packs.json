@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "crm-starter",
+    "title": "CRM Starter Pack",
+    "description": "Generate a functional CRM MVP with auth, customers, and search.",
+    "tier": "Free",
+    "prompts": [
+      {
+        "title": "App Scaffold",
+        "body": "Build a modern CRM app using React + Tailwind + Supabase. Features: auth, dashboard with sidebar, customer records (name,email,phone,company,notes), table view with search & filter, add-new button.",
+        "locked": false,
+        "preview": ""
+      },
+      {
+        "title": "Add/Edit Customer Form",
+        "body": "Create a form with fields: name (required), email (required, validate), phone, company, notes. Include Save and Cancel buttons.",
+        "locked": false,
+        "preview": ""
+      },
+      {
+        "title": "Database Integration",
+        "body": "Connect to Supabase. Customers table: id, name, email, phone, company, notes, created_at. Insert/update on submit; fetch & render in table.",
+        "locked": false,
+        "preview": ""
+      },
+      {
+        "title": "Search & Filter",
+        "body": "Add a search bar that filters customers by name, email, or company (case-insensitive) and updates results in real time.",
+        "locked": false,
+        "preview": ""
+      }
+    ]
+  },
+  {
+    "slug": "landing-page",
+    "title": "Landing Page Pack",
+    "description": "Spin up a clean SaaS landing quickly.",
+    "tier": "Free",
+    "prompts": [
+      {
+        "title": "App Scaffold",
+        "body": "Build a SaaS landing page using Next.js + Tailwind. Sections: hero (headline+CTA), features grid, pricing table, testimonials, footer with contact form.",
+        "locked": false,
+        "preview": ""
+      },
+      {
+        "title": "Hero Section",
+        "body": "Create a hero with large headline, subheadline, and 'Get Started' button. Responsive, gradient background.",
+        "locked": false,
+        "preview": ""
+      },
+      {
+        "title": "Pricing Table",
+        "body": "Add 3 pricing tiers with features and CTA; highlight the Pro tier as recommended.",
+        "locked": false,
+        "preview": ""
+      }
+    ]
+  },
+  {
+    "slug": "booking-app",
+    "title": "Booking App Pack",
+    "description": "Calendar bookings with admin approval.",
+    "tier": "Pro",
+    "prompts": [
+      {
+        "title": "App Scaffold",
+        "body": "Build a booking system with Next.js + Tailwind + Supabase. Auth, booking calendar, user create/view/cancel, admin approve/reject.",
+        "locked": true,
+        "preview": "Build a booking system with auth + calendar. (Pro pack preview)"
+      },
+      {
+        "title": "Booking Form",
+        "body": "Form: date & time picker, service type dropdown, notes; save to Supabase.",
+        "locked": true,
+        "preview": "Booking form (Pro preview)"
+      },
+      {
+        "title": "Calendar View",
+        "body": "Calendar shows bookings; booked slots red, available green; hover for details.",
+        "locked": true,
+        "preview": "Calendar view (Pro preview)"
+      }
+    ]
+  }
+]

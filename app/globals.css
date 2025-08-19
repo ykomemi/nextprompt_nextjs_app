@@ -1,0 +1,17 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg:#0b0d12; --card:#111421; --text:#e8ecf2; --muted:#9aa3b2; --brand:#6e6bfa; --brand2:#8a5cf6;
+}
+body{ @apply bg-[#0b0d12] text-[var(--text)]; background-image: linear-gradient(180deg,#0b0d12,#0e1320); }
+.container{ @apply max-w-5xl mx-auto px-6; }
+.card{ @apply rounded-2xl border border-white/10 bg-white/5 shadow-lg p-5; }
+.btn{ @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold; background: linear-gradient(90deg,var(--brand),var(--brand2)); color:white; }
+.btn-secondary{ @apply bg-[#22283a] text-white; }
+.badge{ @apply text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-gray-300; }
+h1{ @apply text-4xl md:text-5xl font-extrabold; }
+h2{ @apply text-2xl md:text-3xl font-bold; }
+.small{ @apply text-sm text-gray-400; }
