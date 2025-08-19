@@ -1,17 +1,77 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --bg:#0b0d12; --card:#111421; --text:#e8ecf2; --muted:#9aa3b2; --brand:#6e6bfa; --brand2:#8a5cf6;
+/* Light mode tokens (default) */
+:root {
+  --bg: #f9fafb; /* gray-50 */
+  --card: #ffffff; /* white */
+  --text: #0f172a; /* slate-900 */
+  --muted: #64748b; /* slate-500 */
+  --border: #e5e7eb; /* gray-200 */
+  --brand: #667eea; /* indigo-400/500 blend */
+  --brand2: #764ba2; /* purple-600 */
 }
-body{ @apply bg-[#0b0d12] text-[var(--text)]; background-image: linear-gradient(180deg,#0b0d12,#0e1320); }
-.container{ @apply max-w-5xl mx-auto px-6; }
-.card{ @apply rounded-2xl border border-white/10 bg-white/5 shadow-lg p-5; }
-.btn{ @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold; background: linear-gradient(90deg,var(--brand),var(--brand2)); color:white; }
-.btn-secondary{ @apply bg-[#22283a] text-white; }
-.badge{ @apply text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-gray-300; }
-h1{ @apply text-4xl md:text-5xl font-extrabold; }
-h2{ @apply text-2xl md:text-3xl font-bold; }
-.small{ @apply text-sm text-gray-400; }
+
+/* Dark overrides when .dark on <html> */
+.dark {
+  --bg: #0b0d12;
+  --card: #111421;
+  --text: #e8ecf2;
+  --muted: #9aa3b2;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* Base */
+html,
+body {
+  height: 100%;
+}
+body {
+  @apply text-[var(--text)] bg-[var(--bg)];
+}
+
+/* Reusable helpers (light first, dark variants) */
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+.card {
+  @apply rounded-2xl border shadow-sm p-5;
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-white;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 100%);
+}
+.btn-secondary {
+  @apply rounded-xl px-5 py-3 font-semibold text-slate-700 bg-white border border-gray-200;
+}
+.badge {
+  @apply text-xs px-3 py-1 rounded-full border bg-white text-slate-600;
+  border-color: var(--border);
+}
+.kicker {
+  @apply uppercase tracking-widest text-xs text-slate-500;
+}
+
+/* Gradient utilities to match UX Pilot */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode refinements */
+.dark .btn-secondary {
+  @apply bg-[#22283a] text-white border-transparent;
+}
+.dark .badge {
+  @apply bg-white/5 text-gray-300 border-white/10;
+}
