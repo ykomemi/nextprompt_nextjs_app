@@ -4,6 +4,7 @@
     "title": "CRM Starter Pack",
     "description": "Generate a functional CRM MVP with auth, customers, and search.",
     "tier": "Free",
+    "category": "Frontend",
     "prompts": [
       {
         "title": "App Scaffold",
@@ -36,6 +37,7 @@
     "title": "Landing Page Pack",
     "description": "Spin up a clean SaaS landing quickly.",
     "tier": "Free",
+    "category": "Frontend",
     "prompts": [
       {
         "title": "App Scaffold",
@@ -62,6 +64,7 @@
     "title": "Booking App Pack",
     "description": "Calendar bookings with admin approval.",
     "tier": "Pro",
+    "category": "Backend",
     "prompts": [
       {
         "title": "App Scaffold",
